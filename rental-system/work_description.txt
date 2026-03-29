@@ -1,0 +1,117 @@
+🧱 Project Structure (Recommended)
+rental-system/
+│
+├── app.py
+├── config.py
+├── models.py
+├── routes.py
+├── database.db
+│
+├── templates/
+│   ├── base.html
+│   ├── index.html
+│   ├── properties.html
+│   ├── tenants.html
+│   └── payments.html
+│
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── script.js
+│
+└── requirements.txt
+📄 File-by-File Purpose
+🐍 1. app.py (Main entry point)
+Starts your application
+Connects everything together
+
+👉 This is where your app runs
+
+⚙️ 2. config.py (Configuration)
+Stores settings like:
+database connection
+secret keys
+Keeps your app flexible
+🧠 3. models.py (Database structure)
+Defines your database tables
+Example:
+Property
+Tenant
+Payment
+
+👉 This is your data blueprint
+
+🛣️ 4. routes.py (Application logic)
+Handles URLs (endpoints)
+Connects backend logic to UI
+
+👉 Example:
+
+/add-tenant
+/payments
+🗄️ 5. database.db
+Your actual database file (SQLite)
+Stores:
+tenants
+properties
+payments
+🌐 Frontend (UI)
+📁 templates/ (HTML files)
+
+Flask uses these to render pages.
+
+🧩 base.html
+Main layout (navbar, footer)
+Other pages extend it
+
+👉 Avoids repeating code
+
+🏠 index.html
+Dashboard page
+Shows summary (income, properties)
+🏢 properties.html
+Add/view properties
+👤 tenants.html
+Add/view tenants
+💰 payments.html
+Record and view payments
+🎨 static/css/style.css
+Styling (colors, layout, fonts)
+Makes UI look professional
+⚡ static/js/script.js
+Adds interactivity
+Example:
+form validation
+dynamic updates
+📦 6. requirements.txt
+Lists dependencies
+
+Example:
+
+Flask
+Flask-SQLAlchemy
+
+👉 Others can install your project easily
+
+🧠 How Everything Works Together
+User opens browser
+   ↓
+HTML (templates)
+   ↓
+Flask (routes.py)
+   ↓
+models.py (database logic)
+   ↓
+database.db
+   ↓
+Response goes back to browser
+🎯 Simple Explanation
+File	Purpose
+app.py	Starts the app
+models.py	Defines data structure
+routes.py	Handles logic + URLs
+config.py	Settings
+templates/	UI (HTML)
+static/	CSS + JS
+database.db	Stores data
